@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Game</title>
+    <link rel="stylesheet" href="gameInterface.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="scoreButton-container">
+        <div class="buttons-container">
+          <button id="difficultyButton">Hard</button>
+          <button id="EASYButton">EASY</button>
+        </div>
+        <div class="score-area">
+          Score: <span id="score" data-testid="score">0</span>
+          <div id="trail" class="trailNumber"></div>
+        </div>
+      </div>
+
+      <div class="target-area">
+        <div class="target-color" id="targetColor" data-testid="colorBox"></div>
+      </div>
+
+      <div class="message-area">
+        <span id="message" data-testid="gameStatus"></span>
+      </div>
+
+      <div class="color-grid" id="colorGrid"></div>
+
+      <div class="button-area">
+        <button id="resetButton" data-testid="newGameButton">Reset</button>
+        <button id="InstructionButton" data-testid="instructionButton">
+          Read instruction
+        </button>
+      </div>
+     
+    </div>
+    <script src="gameInterface.js"></script>
+  </body>
+</html>

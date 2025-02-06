@@ -1,0 +1,125 @@
+body {
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.container {
+  background-image: url("gamebackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.scoreButton-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30%;
+    
+}
+.difficultyButton, button{
+    background-color: black;
+    color: white;
+    border: 0px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 10px;
+}
+
+.score-area {
+    color: white;
+    max-height: 10px;
+}
+
+
+.buttons-container{
+    display: flex;
+    gap: 10px;
+     max-height:20px ;
+}
+
+
+.target-area {
+  padding-bottom: 20px;
+  max-height: 90px;
+
+}
+
+
+.message-area {
+    margin-top: 40px;
+    font-weight: bold;
+    height: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.target-color {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px; 
+  animation: zoomIn 1s ease-in-out; 
+  display: block;
+  margin: auto;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+}
+
+.color-option {
+  width: 60px;
+  height: 60px;
+  border-radius: 5%;
+  cursor: pointer;
+  border: none;
+}
+
+.message-area {
+ padding-top: 30px;
+  font-weight: bold;
+}
+
+.button-area {
+  display: flex;
+  gap: 10px; 
+  justify-content: center; 
+}
+
+
+
+@media (min-width:768px) {
+
+    body{
+    padding: 30%;
+
+
+}
+    
+}
+
+@media (min-width:1020px) {
+
+    body{
+    padding:20%;
+
+
+}
+    
+}

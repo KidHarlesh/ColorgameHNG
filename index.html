@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COLOR GAME</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="Instruction-container" data-testid="instruction-container">
+      <h1 data-testid="instruction-heading">GAME INSTRUCTION</h1>
+      <h3 data-testid="instruction-text">
+        Select the correct color from the grid! A right guess earns you a win,
+        but a wrong choice counts as a failure. You have three attempts—use them
+        wisely! Once all attempts are exhausted, it's game over.
+      </h3>
+      <p data-testid="attempts-warning">
+        !!!You have three attempts. Choose wisely!
+      </p>
+      <button data-testid="play-button">Play</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
