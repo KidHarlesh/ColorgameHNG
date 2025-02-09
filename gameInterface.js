@@ -109,6 +109,12 @@ function handleDifficulty() {
 resetButton.addEventListener("click", resetGame);
 difficultyButton.addEventListener("click", handleDifficulty);
 
+Instruction.addEventListener("click", function () {
+  window.location.href = "index.html";
+} )
+
+newRound(); // Start the game initially
+
 
 function toggleMusic() {
   if (music.paused) {
@@ -128,11 +134,3 @@ music.addEventListener("ended", function () {
 music.addEventListener("error", function (error) {
   console.error("Music playback error:", error);
 });
-
-
-
-Instruction.addEventListener("click", function () {
-  window.location.href = "index.html";
-} )
-
-newRound(); // Start the game initially
