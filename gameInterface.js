@@ -5,6 +5,7 @@ const messageDisplay = document.getElementById("message");
 const resetButton = document.getElementById("resetButton");
 const difficultyButton = document.getElementById("difficultyButton");
 const trailDisplay = document.getElementById("trail");
+const Instruction = document.getElementById("InstructionButton");
 
 let score = 0;
 let trail = 0;
@@ -61,13 +62,13 @@ function checkColor(event) {
     messageDisplay.textContent = "Correct!";
     messageDisplay.style.color = "green";
     trail = 0;
-    trailDisplay.textContent = "TRAIL : 0";
+    trailDisplay.textContent = "Trail : 0";
     setTimeout(newRound, 2000);
   } else {
     messageDisplay.textContent = "Wrong!";
     messageDisplay.style.color = "red";
     trail++;
-    trailDisplay.textContent = "Trail:" +  trail;
+    trailDisplay.textContent = "Trail  :  " +   trail;
      if (trail > 0) {
         trailDisplay.style.color = "red";
      } 
@@ -82,7 +83,8 @@ function checkColor(event) {
 function newRound() {
   generateTargetColor();
   generateColorGrid();
-  messageDisplay.textContent = "";
+  messageDisplay.style.color="green"
+  messageDisplay.textContent = " Good luck";
 }
 
 function gameOver() {
@@ -105,5 +107,9 @@ function handleDifficulty() {
 
 resetButton.addEventListener("click", resetGame);
 difficultyButton.addEventListener("click", handleDifficulty);
+
+Instruction.addEventListener("click", function () {
+  window.location.href = "index.html";
+} )
 
 newRound(); // Start the game initially
