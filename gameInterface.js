@@ -6,6 +6,7 @@ const resetButton = document.getElementById("resetButton");
 const difficultyButton = document.getElementById("difficultyButton");
 const trailDisplay = document.getElementById("trail");
 const Instruction = document.getElementById("InstructionButton");
+const music = document.getElementById("backgroundMusic");
 
 let score = 0;
 let trail = 0;
@@ -102,11 +103,33 @@ function resetGame() {
 }
 
 function handleDifficulty() {
-  alert("Coming Soon!"); // Or navigate to instructions
+  alert("Coming Soon!"); 
 }
 
 resetButton.addEventListener("click", resetGame);
 difficultyButton.addEventListener("click", handleDifficulty);
+
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
+}
+
+music.volume = 0.1;
+
+music.addEventListener("ended", function () {
+  music.currentTime = 0;
+  music.play();
+});
+
+music.addEventListener("error", function (error) {
+  console.error("Music playback error:", error);
+});
+
+
 
 Instruction.addEventListener("click", function () {
   window.location.href = "index.html";
