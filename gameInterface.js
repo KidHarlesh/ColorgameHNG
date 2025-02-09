@@ -7,6 +7,7 @@ const difficultyButton = document.getElementById("difficultyButton");
 const trailDisplay = document.getElementById("trail");
 const Instruction = document.getElementById("InstructionButton");
 const music = document.getElementById("backgroundMusic");
+const musicToggle = document.getElementById("musicToggle");
 
 let score = 0;
 let trail = 0;
@@ -33,7 +34,7 @@ function generateTargetColor() {
 function generateColorGrid() {
   colorGrid.innerHTML = ""; // Clear previous grid
 
-  const correctIndex = Math.floor(Math.random() * 6); // Index of correct color
+  const correctIndex = Math.floor(Math.random() * 6); 
 
   for (let i = 0; i < 6; i++) {
     const colorOption = document.createElement("button");
@@ -45,7 +46,7 @@ function generateColorGrid() {
       let randomColor;
       do {
         randomColor = colors[Math.floor(Math.random() * colors.length)];
-      } while (randomColor === targetColorValue); // Avoid duplicate colors
+      } while (randomColor === targetColorValue); //
 
       colorOption.style.backgroundColor = randomColor;
     }
@@ -89,7 +90,6 @@ function newRound() {
 }
 
 function gameOver() {
-  alert("Game Over!"); // Or use a modal
   resetGame();
 }
 
@@ -113,16 +113,26 @@ Instruction.addEventListener("click", function () {
   window.location.href = "index.html";
 } )
 
-newRound(); // Start the game initially
+newRound(); 
 
 
 function toggleMusic() {
   if (music.paused) {
     music.play();
+     musicToggle.textContent = "Pause Music";
   } else {
     music.pause();
+     musicToggle.textContent = "Play Music";
   }
 }
+
+window.addEventListener("load", (event) => {
+  music.play().catch((error) => {
+    console.error("Autoplay failed:", error); 
+    musicToggle.textContent = "Play Music";
+  });
+  musicToggle.textContent = "Pause Music"; 
+});
 
 music.volume = 0.1;
 

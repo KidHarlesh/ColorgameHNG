@@ -12,12 +12,17 @@
         <div class="buttons-container">
           <button id="difficultyButton">Hard</button>
           <button id="EASYButton">EASY</button>
-          <div>
-  <audio id="backgroundMusic" autoplay loop>
-    <source src="sounds/Alan-Walker-Spectre-(RawPraise.ng).mp3" type="audio/mpeg">  <source src="sounds/Alan-Walker-Spectre-(RawPraise.ng).mp3" type="audio/ogg"> 
-  </audio>
-  <button onclick="toggleMusic()">Play/Pause music</button>
-</div>
+          <audio id="backgroundMusic" autoplay loop>
+        <source
+          src="sounds/Alan-Walker-Spectre-(RawPraise.ng).mp3"
+          type="audio/mpeg"
+        />
+        <source
+          src="sounds/Alan-Walker-Spectre-(RawPraise.ng).mp3"
+          type="audio/ogg"
+        />
+      </audio>
+      <button id="musicToggle" onclick="toggleMusic()">Play Music</button>
         </div>
         <div class="score-area">
           Score : <span id="score" data-testid="score">0</span>
@@ -25,15 +30,15 @@
         </div>
       </div>
 
+
+
       <div class="target-area">
         <div class="target-color" id="targetColor" data-testid="colorBox"></div>
       </div>
 
-    
-
       <div class="color-grid" id="colorGrid"></div>
-      
-        <div class="message-area">
+
+      <div class="message-area">
         <span id="message" data-testid="gameStatus"></span>
       </div>
 
